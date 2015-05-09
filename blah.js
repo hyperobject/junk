@@ -13,6 +13,7 @@
 		$.getJSON('http://crossorigin.me/http://scratch.mit.edu/varserver/' + id, function(json){
 			for (var i=0; i<json['variables'].length; i++){
 				if (json['variables'][i]['name'] == "☁" + name){
+					console.log(json['variables'][i]['name']);
 					callback(json['variables'][i]["value"]);
 				}
 			}
